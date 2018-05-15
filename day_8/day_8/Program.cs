@@ -6,7 +6,9 @@ namespace day_8
     {
         static void Main(string[] args)
         {
-            Paraugs();
+            // Paraugs();
+            //JaunaZvaigznite();
+            Skaitli();
 
 
             Console.WriteLine();
@@ -35,7 +37,60 @@ namespace day_8
                 Console.WriteLine(masivs[i]);
             }
 
-            //Console.ReadLine();
+
+        }
+
+        static void JaunaZvaigznite()
+        {
+            string mainigais = "";
+            string mainigais2 = "";
+            string[] zvaigznites = new string[3];
+            zvaigznites[0] = "*";
+            zvaigznites[1] = "**";
+            zvaigznites[2] = "***";
+
+            for (int i = 0; i < 3; i++)
+
+            {
+                if (i == 1)
+                {
+                    mainigais = zvaigznites[i];
+                }
+                Console.WriteLine(zvaigznites[i]);
+
+                if (i == 0)
+                {
+                    mainigais2 = zvaigznites[i];
+                }
+                ;
+
+            }
+        }
+
+        static void Skaitli()
+        {
+            int[] izvade = new int[5];
+            string[] ievade = new string[5];
+
+            for (int i = 0; i < 5; i++)
+            {
+
+                ievade[i] = Console.ReadLine();
+                Console.Clear();
+               
+                izvade[i] = Convert.ToInt16(ievade[i]);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(izvade[i]  );
+            }
+
+            Console.WriteLine(izvade[0] + izvade[1] + izvade[2] + izvade[3] + izvade[4]);
+
+
+
+
         }
     }
 }
